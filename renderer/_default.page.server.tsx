@@ -21,7 +21,7 @@ async function render(pageContext: PageContextServer) {
   // See https://vite-plugin-ssr.com/head
   const { documentProps } = pageContext.exports
   const title = (documentProps && documentProps.title) || 'Colinterp'
-  const desc = (documentProps && documentProps.description) || 'Web app that linearly interpolates 2 colors to generate a palette'
+  const desc = (documentProps && documentProps.description) || 'Web app that linearly interpolates 2 colors to generate a palette using Web Assembly'
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
