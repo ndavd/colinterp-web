@@ -1,0 +1,51 @@
+/* This CSS is common to all pages */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  background-color: #13131A;
+  color: #FFFFFF;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration-line: underline;
+  @apply my-2;
+}
+
+/* GitHub corner */
+.github-corner:hover .octo-arm{
+  animation:octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave{
+  0%,100%{
+    transform:rotate(0)
+  }
+  20%,60%{
+    transform:rotate(-25deg)
+  }
+  40%,80%
+  {
+    transform:rotate(10deg)
+  }
+}
+@media (max-width:500px){
+  .github-corner:hover .octo-arm{
+    animation:none
+  }
+  .github-corner .octo-arm{
+    animation:octocat-wave 560ms ease-in-out
+  }
+}
