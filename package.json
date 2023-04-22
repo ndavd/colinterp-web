@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "npm run server",
     "prod": "npm run build && npm run server:prod",
-    "build": "vite build",
+    "// We need to define a `build` script, otherwise Vercel ignores the static files living at `dist/client/`": "",
+    "build": "echo 'I will never be called because the `vercel-build` script supersedes me'",
+    "// We need to run the entire build in `vercel-build` instead of `build` so that Vercel keeps the `dist/` directory in production (Vercel discards all files generated during the `build` script.)": "",
+    "vercel-build": "vite build",
     "server": "ts-node ./server/index.ts",
     "server:prod": "cross-env NODE_ENV=production ts-node ./server/index.ts"
   },
